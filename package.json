@@ -1,0 +1,44 @@
+{
+  "name": "react-project-cli",
+  "version": "1.0.0",
+  "description": "This is a react project cli for webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq2575896094/react-project-cli.git"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "qq2575896094 <qq2575896094@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qq2575896094/react-project-cli/issues"
+  },
+  "homepage": "https://github.com/qq2575896094/react-project-cli#readme",
+  "dependencies": {
+    "react": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

@@ -1,2 +1,2 @@
 # react-project-cli
-This is a react project cli for webapck
+This is a react project cli for webpack.
