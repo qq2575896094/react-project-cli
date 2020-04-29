@@ -46,6 +46,17 @@ module.exports = {
         })
     ],
     devServer: {
+        before() { // 在所有内部中间件之前执行
 
+        },
+        after(app, server) { // 在服务内部的所有其他中间件之后, 执行自定义的中间件
+
+        },
+        allowedHosts: [ // 允许
+
+        ],
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: 12003
     }
 };
