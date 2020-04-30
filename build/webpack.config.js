@@ -10,11 +10,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const APP_PATH = path.resolve(__dirname, './src');
 
+const host = require('ip').address().toString()
+const port = 12003
+
 module.exports = {
     entry: "./src/index.js",
     output: {
         filename: "main.[hash:8].js",
-        path: path.resolve(__dirname, './dist')
+        path: path.resolve(__dirname, './tmp')
     },
     externals: [],
     module: {
@@ -29,6 +32,11 @@ module.exports = {
                 include: APP_PATH,
                 use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader']
             },
+            {
+                test: /\.jsx?$/,
+                include: APP_PATH,
+                use: 'babel-loader'
+            }
         ]
     },
     plugins: [
@@ -46,17 +54,11 @@ module.exports = {
         })
     ],
     devServer: {
-        before() { // 在所有内部中间件之前执行
-
-        },
-        after(app, server) { // 在服务内部的所有其他中间件之后, 执行自定义的中间件
-
-        },
-        allowedHosts: [ // 允许
-
-        ],
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, 'tmp'),
+        publicPath: '/',
         compress: true,
-        port: 12003
+        host,
+        port,
+        open: true
     }
 };
